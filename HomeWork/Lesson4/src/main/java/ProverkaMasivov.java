@@ -10,13 +10,12 @@ import java.util.Arrays;
 public class ProverkaMasivov {
     public static void main(String[] args) {
         int[] mas = {0, 3, 46, 3, 2, 1, 2};
-        int k = 0;
-        for (int i = 0; i < mas.length - 1; i++) {
-            for (int j = i + 1; j < mas.length - 1; j++) {
+        for (int i = 0; i < mas.length; i++) {
+            for (int j = i + 1; j < mas.length; j++) {
 
                 if (mas[i] == mas[j]) {
-                    k++;
-                    System.out.println("Повтор " + mas[j] + " " + k);
+
+                    System.out.println("Повтор " + mas[j] + " ");
                 }
             }
         }
