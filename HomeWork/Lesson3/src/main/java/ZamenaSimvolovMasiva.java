@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -28,26 +29,30 @@ public class ZamenaSimvolovMasiva {
         int k = 3;
         int n = 3;
         int[][] array = new int[k][n];
-        String[][] array1 = new String[3][3];
+        String[][] array1 = new String[k][n];
         for (int i = 0; i < k; i++) {
             for (int j = 0; j < n; j++) {
-                array[i][j] = random.nextInt(21);
+                array[i][j] = random.nextInt(22);
                 System.out.print((array[i][j] + " "));
-                if (array[i][j] % 3 == 0) {
+                if ((array[i][j] % 21 == 0)) {
                     array1[i][j] = "+";
-                }
-                if (array[i][j] % 7 == 0) {
+                } else if ((array[i][j] % 3 == 0)) {
+                    array1[i][j] = "+";
+                } else if (array[i][j] % 7 == 0) {
                     array1[i][j] = "-";
                 } else {
                     array1[i][j] = "*";
                 }
-                // System.out.println((array1[i][j] + " "));
+
+
             }
             System.out.println();
-
         }
+        for (String[] strings : array1) {
+            System.out.println(Arrays.toString(strings));
+        }
+
     }
 
 
 }
-
