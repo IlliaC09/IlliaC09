@@ -6,7 +6,7 @@
 
 import java.util.Scanner;
 
-public class Cislo {
+public class Chislo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите число :");
@@ -19,6 +19,10 @@ public class Cislo {
             System.out.println("Отрицательное");
             System.out.println((number + "").length() - 1);
         }
-    }
+        if (number == 0) {
+            System.out.println("не положительное и не отрицательное");
+            System.out.println((number + "").length());
+        }
 
+    }
 }

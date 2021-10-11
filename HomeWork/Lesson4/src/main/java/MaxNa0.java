@@ -17,11 +17,14 @@ public class MaxNa0 {
             }
 
         }
-
+        int temp = 0;
         System.out.println(Arrays.toString(mas));
         System.out.println("Максимальный : " + maxNumber);
         System.out.println("Индекс : " + maxIndex);
+        temp = mas[0];
         mas[0] = maxNumber;
+        mas[maxIndex] = temp;
+
         System.out.println(Arrays.toString(mas));
     }
 
