@@ -9,20 +9,19 @@ public class Calculator {
      */
     public static void main(String[] args) {
         Random random = new Random();
-        int[] Array = new int[5];
-        for (int i = 0; i < Array.length; i++) {
-            Array[i] = random.nextInt(30);
+        int[] array = new int[5];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(30 - 25);
         }
         int count = 0;
-        for (int i = 0; i < Array.length; i++) {
-            if (Array[i] % 2 == 1) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 1) {
                 count++;
             }
-            ;
 
         }
 
-        System.out.println(Arrays.toString(Array));
+        System.out.println(Arrays.toString(array));
         System.out.println(count);
     }
 

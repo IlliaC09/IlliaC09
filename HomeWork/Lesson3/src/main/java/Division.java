@@ -11,7 +11,7 @@ public class Division {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите число: ");
         int number = sc.nextInt();
-        if ((number % 15 == 0)) {
+        if (number % 15 == 0) {
             System.out.println("foobar");
         } else if ((number % 3 == 0)) {
             System.out.println("foo");
