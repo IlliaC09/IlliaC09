@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class Computer {
     private String processor;     // процессор
-    private int opera;            // оперативка
+    private int oper;            // оперативка
     private int hard;             // Жесткий
     private int resource = 5;
     private int countOn;            // счетчик включений
     private int countOff;         // счетчик выключений
     private boolean isLive = true;
 
-    public Computer(String processor, int opera, int hard, int resource, int countOn, int countOff, boolean isLive) {
+    public Computer(String processor, int oper, int hard, int resource, int countOn, int countOff, boolean isLive) {
         this.processor = processor;
-        this.opera = opera;
+        this.oper = oper;
         this.hard = hard;
         this.resource = resource;
         this.countOn = countOn;
@@ -23,7 +23,7 @@ public class Computer {
     }
 
     public void displayInfo() {
-        System.out.printf("Proc: %s \topera: %s \thard: %d\n \tВключений: %s \tВыключений: %s \n \tРесурс : %s \t Флаг: %s", processor, opera, hard, countOn, countOff, resource, isLive);
+        System.out.printf("Proc: %s \topera: %s \thard: %d\n \tВключений: %s \tВыключений: %s \n \tРесурс : %s \t Флаг: %s", processor, oper, hard, countOn, countOff, resource, isLive);
     }
 
     public void on() {
@@ -80,7 +80,7 @@ public class Computer {
     public String toString() {
         return "Computer{" +
                 "processor='" + processor + '\'' +
-                ", opera=" + opera +
+                ", opera=" + oper +
                 ", hard=" + hard +
                 ", resource=" + resource +
                 ", countOn=" + countOn +

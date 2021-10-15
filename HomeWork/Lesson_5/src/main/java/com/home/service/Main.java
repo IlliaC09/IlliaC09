@@ -7,8 +7,8 @@ public class Main {
         Computer lenovo = new Computer("lenovo", 256, 128, 5, 0, 0, true); // создание объекта
         lenovo.displayInfo();
 
-        lenovo.on();
         lenovo.off();
+        lenovo.on();
         lenovo.displayInfo();
     }
 }
