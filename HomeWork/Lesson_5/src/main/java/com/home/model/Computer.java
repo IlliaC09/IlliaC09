@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class Computer {
     private String processor;     // процессор
-    private int oper;            // оперативка
+    private int ram;            // оперативка
     private int hard;             // Жесткий
     private int resource = 5;
     private int countOn;            // счетчик включений
     private int countOff;         // счетчик выключений
     private boolean isLive = true;
 
-    public Computer(String processor, int oper, int hard, int resource, int countOn, int countOff, boolean isLive) {
+    public Computer(String processor, int ram, int hard, int resource, int countOn, int countOff, boolean isLive) {
         this.processor = processor;
-        this.oper = oper;
+        this.ram = ram;
         this.hard = hard;
         this.resource = resource;
         this.countOn = countOn;
@@ -23,15 +23,17 @@ public class Computer {
     }
 
     public void displayInfo() {
-        System.out.printf("Proc: %s \topera: %s \thard: %d\n \tВключений: %s \tВыключений: %s \n \tРесурс : %s \t Флаг: %s", processor, oper, hard, countOn, countOff, resource, isLive);
+        System.out.printf("Proc: %s \topera: %d \thard: %d\n \tВключений: %d \tВыключений: %d \n \tРесурс : %d \t Флаг: %s", processor, ram, hard, countOn, countOff, resource, isLive);
     }
 
     public void on() {
         boolean resourceLive = isResourceLive();
         if (!resourceLive) {
             System.out.println("Компьютер сгорел!");
+        } else {
             return;
         }
+
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         System.out.println("On. Внимание! Введите 0 или 1 :");
@@ -50,8 +52,10 @@ public class Computer {
         boolean resourceLive = isResourceLive();
         if (!resourceLive) {
             System.out.println("Компьютер сгорел!");
+        } else {
             return;
         }
+
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Off. Внимание! Введите 0 или 1 :");
@@ -80,7 +84,7 @@ public class Computer {
     public String toString() {
         return "Computer{" +
                 "processor='" + processor + '\'' +
-                ", opera=" + oper +
+                ", ram=" + ram +
                 ", hard=" + hard +
                 ", resource=" + resource +
                 ", countOn=" + countOn +
