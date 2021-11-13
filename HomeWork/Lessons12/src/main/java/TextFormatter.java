@@ -1,14 +1,7 @@
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@ToString
 public class TextFormatter {
 
+    private TextFormatter() {
+    }
 
     public static void changeString(String str) {
 
@@ -49,10 +42,11 @@ public class TextFormatter {
             temp = new StringBuilder(words[i]).reverse().toString();
             if (words[i].equals(temp)) {
                 return true;
-            } else
+            } else {
                 return false;
+            }
         }
-        return true;
+        return false;
     }
 
     public static void wordSentence(String str) {
