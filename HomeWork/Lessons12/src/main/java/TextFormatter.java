@@ -38,12 +38,11 @@ public class TextFormatter {
     public static boolean isPolindromes(String str) {
         String temp = "";
         String[] words = str.split(" ");
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < words.length; i++) {
             temp = new StringBuilder(words[i]).reverse().toString();
             if (words[i].equals(temp)) {
                 return true;
-            } else {
-                return false;
+
             }
         }
         return false;
